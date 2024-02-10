@@ -18,7 +18,7 @@ import { AuthorModule } from './author/author.module';
     BookModule,
     EditorialModule,
     HttpClientModule,
-    AuthorModule
+    AuthorModule,
   ],
   providers: [
     provideClientHydration()
