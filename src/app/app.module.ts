@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookModule } from './book/book.module';
 import { EditorialModule } from './editorial/editorial.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { AuthorModule } from './author/author.module';
+import { BookRoutingModule } from './book/book-routing.module';
+import { AuthorRoutingModule } from './author/author-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,13 @@ import { AuthorModule } from './author/author.module';
     EditorialModule,
     HttpClientModule,
     AuthorModule,
+    BookRoutingModule,
+    AuthorRoutingModule,
+    EditorialModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

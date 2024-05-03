@@ -28,6 +28,7 @@ export class BookListComponent implements OnInit {
   onSelected(book: BookDetail): void {
     this.selected = true;
     this.selectedBook = book;
+    console.log("this.selectedBook:", this.selectedBook);
   }
 
 

@@ -21,7 +21,7 @@ export class BookDetail extends Book {
     reviews: Array<Review>
   ) {
     super(id, name, isbn, description, image, publishingDate, editorial);
-    this.authors = authors;
+    this.authors! = authors;
     this.reviews = reviews;
   }
 }
